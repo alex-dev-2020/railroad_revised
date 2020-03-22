@@ -1,15 +1,22 @@
+#  class Train
+
+# these two requires just for tests
+
 require_relative 'made_by'
 require_relative 'instance_counter'
-require_relative 'seed'
-# require_relative 'cargo_train'
-# require_relative 'pass_train'
-
 
 class Train
-  attr_reader :name, :type, :wagons, :current_station, :number, :list
+
+  # class << self
+  #   attr_reader :list
+  # end
+
+  attr_reader :name, :type, :wagons, :current_station, :number,:list 
   include MadeBy
   include InstanceCounter
   @@list = {}
+
+
 
   def self.list
     @@list
@@ -30,6 +37,3 @@ class Train
   end
 end
 
-
-# seed(Train.list)
-# puts Train.list
