@@ -1,21 +1,10 @@
 #  class Train
-
-# these two requires just for tests
-
-require_relative 'made_by'
-require_relative 'instance_counter'
-
 class Train
 
-  # class << self
-  #   attr_reader :list
-  # end
-
-  attr_reader :name, :type, :wagons, :current_station, :number,:list 
+  attr_reader :name, :type, :wagons, :current_station, :number, :list
   include MadeBy
   include InstanceCounter
   @@list = {}
-
 
 
   def self.list
