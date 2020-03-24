@@ -1,5 +1,5 @@
 module InstanceCounter
-
+  
 
   def self.included(base)
     base.extend ClassMethods
@@ -10,7 +10,7 @@ module InstanceCounter
     
 
     def instance
-      @instance
+      @instance ||= 0
     end
 
     def instance=(value)
@@ -22,6 +22,7 @@ module InstanceCounter
     protected
 
     def register_instance
+
       self.class.instance ||= 0
       self.class.instance += 1
     end
