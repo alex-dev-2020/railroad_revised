@@ -9,12 +9,12 @@ require_relative 'station'
 
 puts 'количество инстансов класса Train'
 puts Train.instance
-test_train_1 = Train.new('name_1', ' number_1', ' made_by_1')
-puts test_train_1
+test_train_1 = Train.new('train_1', 'ABC-12', ' made_by_1')
+puts "Создан поезд: #{test_train_1.name} c номером: #{test_train_1.number}"
 puts 'количество инстансов класса Train'
 puts Train.instance
-test_train_2 = Train.new('name_2', ' number_2', ' made_by_2')
-puts test_train_2
+test_train_2 = Train.new('name_2', 'DEF34', ' made_by_2')
+puts test_train_2.number
 puts 'количество инстансов класса Train'
 puts Train.instance
 test_train_3 = Train.new('name_3', ' number_3', ' made_by_3')
